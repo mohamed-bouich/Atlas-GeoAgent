@@ -1,0 +1,295 @@
+{
+  "Regex baseline": {
+    "n": 47,
+    "complete_n": 35,
+    "errors": 0,
+    "field_accuracy": {
+      "place": 0.8285714285714286,
+      "season": 1.0,
+      "years": 1.0,
+      "index": 1.0,
+      "distance": 0.9714285714285714
+    },
+    "exact_match": 0.8,
+    "exact_match_by_lang": {
+      "en": 0.7142857142857143,
+      "fr": 0.9285714285714286
+    },
+    "exact_match_hard": 0.3333333333333333,
+    "hard_n": 9,
+    "problem_accuracy": 0.8085106382978723,
+    "problem_accuracy_by_kind": {
+      "complete": 0.8285714285714286,
+      "missing": 0.75,
+      "invalid": 0.75
+    },
+    "seconds_mean": 6.594467986167032e-05,
+    "failures": [
+      {
+        "question": "Is Dakhla greener in autumn 2024 than in autumn 2022?",
+        "kind": "complete",
+        "wrong_fields": [
+          "place"
+        ],
+        "expected_problems": [],
+        "got_problems": [
+          "place"
+        ],
+        "got": {
+          "place": null,
+          "index": "ndvi",
+          "season": "autumn",
+          "before_year": 2022,
+          "after_year": 2024,
+          "distance_km": null,
+          "distance_kind": null
+        }
+      },
+      {
+        "question": "Compare Tangier between 2022 and 2024.",
+        "kind": "missing",
+        "wrong_fields": [],
+        "expected_problems": [
+          "season"
+        ],
+        "got_problems": [
+          "place",
+          "season"
+        ],
+        "got": {
+          "place": null,
+          "index": "ndvi",
+          "season": null,
+          "before_year": 2022,
+          "after_year": 2024,
+          "distance_km": null,
+          "distance_kind": null
+        }
+      },
+      {
+        "question": "Compare Rabat last summer and this summer.",
+        "kind": "missing",
+        "wrong_fields": [],
+        "expected_problems": [
+          "years"
+        ],
+        "got_problems": [
+          "place",
+          "years"
+        ],
+        "got": {
+          "place": null,
+          "index": "ndvi",
+          "season": "summer",
+          "before_year": null,
+          "after_year": null,
+          "distance_km": null,
+          "distance_kind": null
+        }
+      },
+      {
+        "question": "Compare Rabat in summer 2024 and summer 2024.",
+        "kind": "invalid",
+        "wrong_fields": [],
+        "expected_problems": [
+          "same_year"
+        ],
+        "got_problems": [
+          "place",
+          "years"
+        ],
+        "got": {
+          "place": null,
+          "index": "ndvi",
+          "season": "summer",
+          "before_year": 2024,
+          "after_year": null,
+          "distance_km": null,
+          "distance_kind": null
+        }
+      },
+      {
+        "question": "how did vegetation change around al hoceima between summer 2023 and summer 2024",
+        "kind": "complete",
+        "wrong_fields": [
+          "place"
+        ],
+        "expected_problems": [],
+        "got_problems": [
+          "place"
+        ],
+        "got": {
+          "place": null,
+          "index": "ndvi",
+          "season": "summer",
+          "before_year": 2023,
+          "after_year": 2024,
+          "distance_km": null,
+          "distance_kind": null
+        }
+      },
+      {
+        "question": "Rabat: vegetation change, summer 2021 vs summer 2023.",
+        "kind": "complete",
+        "wrong_fields": [
+          "place"
+        ],
+        "expected_problems": [],
+        "got_problems": [
+          "place"
+        ],
+        "got": {
+          "place": null,
+          "index": "ndvi",
+          "season": "summer",
+          "before_year": 2021,
+          "after_year": 2023,
+          "distance_km": null,
+          "distance_kind": null
+        }
+      },
+      {
+        "question": "comment la végétation a évolué à tanger entre l'été 2022 et l'été 2024",
+        "kind": "complete",
+        "wrong_fields": [
+          "place"
+        ],
+        "expected_problems": [],
+        "got_problems": [
+          "place"
+        ],
+        "got": {
+          "place": null,
+          "index": "ndvi",
+          "season": "summer",
+          "before_year": 2022,
+          "after_year": 2024,
+          "distance_km": null,
+          "distance_kind": null
+        }
+      },
+      {
+        "question": "Marrakech vegetation, summer 2020 vs 2024.",
+        "kind": "complete",
+        "wrong_fields": [
+          "place"
+        ],
+        "expected_problems": [],
+        "got_problems": [
+          "place"
+        ],
+        "got": {
+          "place": null,
+          "index": "ndvi",
+          "season": "summer",
+          "before_year": 2020,
+          "after_year": 2024,
+          "distance_km": null,
+          "distance_kind": null
+        }
+      },
+      {
+        "question": "Analyse within three km of Agadir, summer 2023 vs summer 2024.",
+        "kind": "complete",
+        "wrong_fields": [
+          "distance"
+        ],
+        "expected_problems": [],
+        "got_problems": [],
+        "got": {
+          "place": "Agadir",
+          "index": "ndvi",
+          "season": "summer",
+          "before_year": 2023,
+          "after_year": 2024,
+          "distance_km": null,
+          "distance_kind": null
+        }
+      },
+      {
+        "question": "The water in the reservoir by Taounate: more or less between spring 2023 and spring 2025?",
+        "kind": "complete",
+        "wrong_fields": [
+          "place"
+        ],
+        "expected_problems": [],
+        "got_problems": [
+          "place"
+        ],
+        "got": {
+          "place": null,
+          "index": "ndwi",
+          "season": "spring",
+          "before_year": 2023,
+          "after_year": 2025,
+          "distance_km": null,
+          "distance_kind": null
+        }
+      }
+    ]
+  },
+  "LLM (qwen2.5:7b)": {
+    "n": 47,
+    "complete_n": 35,
+    "errors": 0,
+    "field_accuracy": {
+      "place": 1.0,
+      "season": 1.0,
+      "years": 1.0,
+      "index": 1.0,
+      "distance": 0.9428571428571428
+    },
+    "exact_match": 0.9428571428571428,
+    "exact_match_by_lang": {
+      "en": 0.9523809523809523,
+      "fr": 0.9285714285714286
+    },
+    "exact_match_hard": 0.8888888888888888,
+    "hard_n": 9,
+    "problem_accuracy": 1.0,
+    "problem_accuracy_by_kind": {
+      "complete": 1.0,
+      "missing": 1.0,
+      "invalid": 1.0
+    },
+    "seconds_mean": 12.853303706383969,
+    "failures": [
+      {
+        "question": "Analyse une zone de 5 km autour de Nador, printemps 2023 contre printemps 2024.",
+        "kind": "complete",
+        "wrong_fields": [
+          "distance"
+        ],
+        "expected_problems": [],
+        "got_problems": [],
+        "got": {
+          "place": "Nador",
+          "index": "ndvi",
+          "season": "spring",
+          "before_year": 2023,
+          "after_year": 2024,
+          "distance_km": 5.0,
+          "distance_kind": "radius"
+        }
+      },
+      {
+        "question": "Analyse within three km of Agadir, summer 2023 vs summer 2024.",
+        "kind": "complete",
+        "wrong_fields": [
+          "distance"
+        ],
+        "expected_problems": [],
+        "got_problems": [],
+        "got": {
+          "place": "Agadir",
+          "index": "ndvi",
+          "season": "summer",
+          "before_year": 2023,
+          "after_year": 2024,
+          "distance_km": null,
+          "distance_kind": null
+        }
+      }
+    ]
+  }
+}
